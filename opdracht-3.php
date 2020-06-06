@@ -1,5 +1,6 @@
 <?php
-$url = "https://gateway.apiportal.ns.nl/reisinformatie-api/api/v2/arrivals?station=RTD";
+
+$url = 'https://gateway.apiportal.ns.nl/reisinformatie-api/api/v1/calamities?lang=NL';
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -7,16 +8,20 @@ curl_setopt($ch, CURLOPT_POSTREDIR, 3);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // follow http 3xx redirects
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Ocp-Apim-Subscription-Key: 41fbfefd81cb4fb89a29d05f6e95d7a1'
+    'Ocp-Apim-Subscription-Key: e7262e1ec5b14af7a497777e00594616'
 ));
 
-$resp_orders = curl_exec($ch);
+$resp_orders =curl_exec($ch);
 
 echo $resp_orders;
 die();
 
+
+
 //$json = json_decode($resp_orders);
 //
-//foreach ($json->payload as $arrivals) {
-//    echo $arrivals->dateTime .  "<br>";
-//}
+//foreach ($json->payload as $station){
+//    echo $station->code . "<br>";
+//    echo $station->namen->kort . "<br>";
+//    echo '<br>';
+//};
