@@ -12,16 +12,20 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 
 $resp_orders =curl_exec($ch);
+$output = str_replace('\n', '', $resp_orders);
+//echo $output;
+//die();
 
-echo $resp_orders;
-die();
 
 
+$json = json_decode($resp_orders);
 
-//$json = json_decode($resp_orders);
-//
-//foreach ($json->payload as $station){
-//    echo $station->code . "<br>";
-//    echo $station->namen->kort . "<br>";
-//    echo '<br>';
-//};
+foreach ($json->meldingen as $calamities){
+    echo "Melding: " . "<br>" . $calamities->titel . "<br>";
+    echo '<br>';
+    echo "Beschrijving: " . "<br>" . $calamities->beschrijving . "<br>";
+    echo '<br>';
+    echo "Soortmelding: " . "<br>" . $calamities->type . "<br>";
+    echo '<br>';
+
+};

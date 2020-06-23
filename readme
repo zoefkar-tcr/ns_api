@@ -1,5 +1,21 @@
-//index.php
-    Hier hebben wij alle stations opgehaald. Dus hebben we stationnaam en afkorting van het stationnaam opgehaald en getoond.
+//Mappen
+    We hebben twee mappen gemaakt en dat zijn losse opdrachten en search:
 
-//les-2.php
-    Bij les 2 hebben wij reisgegevens opgehaald van het station Zwolle en getoond.
+        //losse opdrachten: Hierin hebben we vier kleine opdrachten gemaakt waarbij we hebben leren werken met de api van ns
+
+             //opdracht1.php
+                 Hier hebben wij de gegevens van alle stations opgehaald. Waarbij we de stationnaam en code hebben opgehaald.
+
+             //opdracht2.php
+                 Hier hebben wij de reisinformatie opgehaald van een station met de stations code en getoond.
+
+             //opdracht3.php
+                 Bij opdracht 3 hebben we de calamiteiten opgehaald van ns. Waarbij we de melding, beschrijving en soortmelding hebben opgehaald.
+
+             //opdracht4.php
+                 Bij opdracht 4 hebben we opdracht 1 uitgebreid. Waarbij we de stationnaam, stationcode, land en typestation opgehaald hebben.
+
+        //search: In deze map hebben we een kleine project gemaakt. Op de index.php(home) pagina we een navbar hebben met stations(met alle stationsgegevens)
+        en meldingen. Op de home pagina kunt u de reisinformatie opvragen van een station met behulp van een navbar.
+
+
